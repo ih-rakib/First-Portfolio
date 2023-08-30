@@ -131,6 +131,7 @@ section {
     color: var(--dark-02, #474747);
     font-size: 20px;
     font-weight: 700;
+    text-align: center;
 }
 
 /* what i do section */
@@ -246,4 +247,61 @@ input {
     height: 24px;
     margin-top: 30px;
     margin-right: 24px;
+}
+
+
+@media screen and (max-width:576px){
+    .banner,
+    nav,
+    .skills-container, 
+    .resume-content, 
+    .about-info-container, 
+    .contact{
+        flex-direction: column;
+        gap: 20px;
+        padding: 10px 20px;
+    }
+
+    .banner{
+        margin: 0 20px;
+    }
+
+    .banner img{
+        width: 100%;
+        height: 376px;
+    }
+
+    nav ul{
+        flex-direction: column;
+        gap: 20px;
+        align-items: flex-start;
+        padding-left: 20px;
+    }
+
+    nav li{
+        margin-left: 0;
+    }
+
+    .about, .contact{
+        padding: 20px;
+    }
+
+    .contact input[type="text"], input[type="email"], textarea {
+        padding: 0 0 0 5px;
+    }
+}
+
+@media screen and (min-width:577px) and (max-width:992px) {
+    .about, .contact{
+        padding: 20px;
+    }
+    .contact, .banner{
+        flex-direction: column;
+    }
+
+    nav ul{
+        flex-direction: column;
+        gap: 20px;
+        align-items: flex-start;
+    }
 }
